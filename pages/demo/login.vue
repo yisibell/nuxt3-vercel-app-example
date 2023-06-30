@@ -27,8 +27,8 @@ import { ElFormItem } from 'element-plus'
 import { useLogin } from '~/composables/api/modules/user'
 
 const form = ref({
-  username: 'DHSZ',
-  password: '123456',
+  username: '',
+  password: '',
 })
 
 const { loginSubmit } = useLogin()
@@ -36,9 +36,9 @@ const handleLogin = async () => {
   const { code } = await loginSubmit(form.value)
 
   if (code === 0) {
-   alert('Api test success!')
+   alert('Login success!')
   } else {
-    alert('Api test error!')
+    alert('Login failed, but HTTP proxy request test success!')
   }
 }
 </script>
