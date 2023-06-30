@@ -11,7 +11,7 @@ const publicRuntimeConfig = getPublicRuntimeConfig(allConfig)
 export default defineNuxtConfig({
   appConfig: publicRuntimeConfig,
   nitro: {
-    preset: 'vercel',
+    preset: 'vercel', // Do not use `vercel-edge`
   },
   modules: [
     '@element-plus/nuxt',
